@@ -10,7 +10,8 @@
     android:background="#FFFFFF"
     tools:context=".ProviderActivity">
 
-    <!-- Logo -->
+
+
     <ImageView
         android:id="@+id/logoImage"
         android:layout_width="344dp"
@@ -24,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Titolo principale -->
+
     <TextView
         android:id="@+id/textViewDescription"
         android:layout_width="346dp"
@@ -39,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Sottotitolo descrittivo -->
+
     <TextView
         android:id="@+id/textViewConnect"
         android:layout_width="348dp"
@@ -53,7 +54,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Sottotitolo extra -->
+
     <TextView
         android:id="@+id/textViewDetaildesc"
         android:layout_width="348dp"
@@ -67,7 +68,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Bottone Connect -->
+
     <Button
         android:id="@+id/ConnectButton"
         android:layout_width="348dp"
@@ -81,8 +82,25 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewDetaildesc"
-        app:layout_constraintVertical_bias="0.442" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="348dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#86B1A4"
+        android:padding="12dp"
+        android:text="Connect Later"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ConnectButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
