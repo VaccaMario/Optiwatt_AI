@@ -49,9 +49,5 @@ class HomeActivity : AppCompatActivity() {
 
             popup.show()
         }
-
-        findViewById<LinearLayout>(R.id.navProvider).setOnClickListener {
-            startActivity(Intent(this, ProviderActivity::class.java))
-        }
     }
 }
