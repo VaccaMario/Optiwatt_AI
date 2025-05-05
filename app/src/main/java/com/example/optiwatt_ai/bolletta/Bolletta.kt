@@ -1,3 +1,5 @@
+package com.example.optiwatt_ai.bolletta
+
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
