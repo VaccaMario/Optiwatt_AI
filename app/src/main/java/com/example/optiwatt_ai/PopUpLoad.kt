@@ -10,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.activity.enableEdgeToEdge
-import com.example.optiwatt_ai.bolletta.salvaBollettaNelDatabase
-
 
 
 class PopUpLoad : AppCompatActivity() {

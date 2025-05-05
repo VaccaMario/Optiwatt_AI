@@ -1,4 +1,4 @@
-// Questo file definisce il database Room dell’applicazione
+package com.example.optiwatt_ai// Questo file definisce il database Room dell’applicazione
 // Contiene la configurazione generale e restituisce l’accesso al DAO (Data Access Object)
 
 import android.content.Context

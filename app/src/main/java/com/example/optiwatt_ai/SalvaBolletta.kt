@@ -1,13 +1,10 @@
-package com.example.optiwatt_ai.bolletta
+package com.example.optiwatt_ai
 
 import android.content.Context
 import android.net.Uri
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-
-import com.example.optiwatt_ai.bolletta.Bolletta
-import com.example.optiwatt_ai.bolletta.AppDatabase
 
 fun salvaBollettaNelDatabase(context: Context, uri: Uri) {
     val nuovaBolletta = Bolletta(
