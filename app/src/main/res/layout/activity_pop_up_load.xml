@@ -7,7 +7,7 @@
     tools:context=".PopUpLoad">
 
     <LinearLayout
-        android:id="@+id/popupContent"
+        android:id="@+id/Popup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/Immagine"
             android:layout_width="match_parent"
             android:layout_height="117dp"
             android:layout_marginBottom="16dp"

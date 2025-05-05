@@ -72,5 +72,11 @@ class HomeActivity : AppCompatActivity() {
         alertDialog.show()
     }
     fun avviaSelettoreImmagine() {
+
+        //da continuare
+
+
+
+
     }
 }
