@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Optiwatt_AI</string>
+    <string name="app_name">Optiwatt AI</string>
+    <string name="home_title">Home</string>
+    <string name="menu_button_desc">Menu</string>
+    <string name="upload_button_desc">Upload image</string>
 </resources>
+

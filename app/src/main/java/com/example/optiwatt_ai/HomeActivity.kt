@@ -2,14 +2,18 @@ package com.example.optiwatt_ai
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.LayoutInflaterCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.view.LayoutInflater
+import androidx.appcompat.app.AlertDialog
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +30,11 @@ class HomeActivity : AppCompatActivity() {
         val ringChart = findViewById<RingChartView>(R.id.ringChart)
         ringChart.percent = 0.75f
         ringChart.invalidate()
+
+        val uploadbutton = findViewById<ImageView>(R.id.UploadButton)
+        uploadbutton.setOnClickListener{
+            mostraDialogUpload()
+        }
 
         val menuButton = findViewById<ImageView>(R.id.menuButton)
 
@@ -49,5 +58,22 @@ class HomeActivity : AppCompatActivity() {
 
             popup.show()
         }
+    }
+    fun mostraDialogUpload() {
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.activity_pop_up_load, null)
+
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        val btnSeleziona = dialogView.findViewById<Button>(R.id.btnSelezionaImmagine)
+        btnSeleziona.setOnClickListener {
+            alertDialog.dismiss()
+            avviaSelettoreImmagine()
+        }
+
+        alertDialog.show()
+    }
+    fun avviaSelettoreImmagine() {
     }
 }
