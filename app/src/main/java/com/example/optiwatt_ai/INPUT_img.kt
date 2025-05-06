@@ -16,6 +16,9 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
+import java.io.File
+import java.io.FileOutputStream
+import java.io.InputStream
 
 class INPUT_img : AppCompatActivity() {
 
@@ -72,27 +75,55 @@ class INPUT_img : AppCompatActivity() {
         }
     }
 
+
+
+    fun copiaImmagineInternamente(context: Context, imageUri: Uri): String? {
+        return try {
+            val inputStream: InputStream? = context.contentResolver.openInputStream(imageUri)
+            val fileName = "bolletta_${System.currentTimeMillis()}.jpg"
+            val file = File(context.filesDir, fileName)
+            val outputStream = FileOutputStream(file)
+
+            inputStream?.copyTo(outputStream)
+
+            inputStream?.close()
+            outputStream.close()
+
+            file.absolutePath
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+
     private fun salvaBollettaNelDatabase(context: Context, imageUri: Uri) {
         val db = AppDatabase.getInstance(context)
         val dao = db.bollettaDao()
 
-        val nuovaBolletta = Bolletta(
-            uriImmagine = imageUri.toString(),
-            consumoTotale = 0.0,
-            costoTotale = 0.0,
-            emissioniCO2 = 0.0,
-            previsioneCosto = 0.0,
-            nomeFornitore = " ",
-            previsioneConsumo = 0.0,
-            data = " ",
-            tip1 = " ",
-            tip2 = " ",
-            tip3 = " "
-        )
+        val pathLocale = copiaImmagineInternamente(context, imageUri)
 
-        lifecycleScope.launch {
-            dao.inserisci(nuovaBolletta)
-            Toast.makeText(context, "Bolletta salvata nel database!", Toast.LENGTH_SHORT).show()
+        if (pathLocale != null) {
+            val nuovaBolletta = Bolletta(
+                uriImmagine = pathLocale,
+                consumoTotale = 0.0,
+                costoTotale = 0.0,
+                emissioniCO2 = 0.0,
+                previsioneCosto = 0.0,
+                nomeFornitore = " ",
+                previsioneConsumo = 0.0,
+                data = " ",
+                tip1 = " ",
+                tip2 = " ",
+                tip3 = " "
+            )
+
+            lifecycleScope.launch {
+                dao.inserisci(nuovaBolletta)
+                Toast.makeText(context, "Bolletta salvata internamente!", Toast.LENGTH_SHORT).show()
+            }
+        } else {
+            Toast.makeText(context, "Errore nel salvataggio dell'immagine", Toast.LENGTH_SHORT).show()
         }
     }
 }
