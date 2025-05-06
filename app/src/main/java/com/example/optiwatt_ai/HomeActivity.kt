@@ -30,8 +30,8 @@ class HomeActivity : AppCompatActivity() {
 
         val uploadbutton = findViewById<ImageView>(R.id.UploadButton)
         uploadbutton.setOnClickListener{
-            mostraDialogUpload()
-        }
+            val intent = Intent(this, INPUT_img::class.java)
+            startActivity(intent)        }
 
         val menuButton = findViewById<ImageView>(R.id.menuButton)
 
@@ -55,28 +55,5 @@ class HomeActivity : AppCompatActivity() {
 
             popup.show()
         }
-    }
-    fun mostraDialogUpload() {
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.activity_pop_up_load, null)
-
-        val alertDialog = AlertDialog.Builder(this)
-            .setView(dialogView)
-            .create()
-
-        val btnSeleziona = dialogView.findViewById<Button>(R.id.btnSelezionaImmagine)
-        btnSeleziona.setOnClickListener {
-            alertDialog.dismiss()
-            avviaSelettoreImmagine()
-        }
-
-        alertDialog.show()
-    }
-    fun avviaSelettoreImmagine() {
-
-        //da continuare
-
-
-
-
     }
 }
