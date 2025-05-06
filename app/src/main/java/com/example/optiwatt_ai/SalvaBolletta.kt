@@ -15,6 +15,7 @@ fun salvaBollettaNelDatabase(context: Context, uri: Uri) {
         previsioneCosto = 0.0,
         nomeFornitore = "",
         previsioneConsumo = 0.0,
+        data = "",
         tip1 = "",
         tip2 = "",
         tip3 = ""

@@ -13,6 +13,7 @@ data class Bolletta(
     val previsioneCosto: Double,
     val nomeFornitore: String,
     val previsioneConsumo: Double,
+    val data: String,
     val tip1: String,
     val tip2: String,
     val tip3: String
