@@ -24,15 +24,16 @@
             android:background="#ededed"
             android:padding="24dp">
 
+
             <TextView
                 android:id="@+id/textHome"
+                style="@style/NunitoBoldText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/home_title"
                 android:textSize="34sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/UploadButton"
+                app:layout_constraintStart_toEndOf="@+id/menuButton"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -50,22 +51,34 @@
 
             <com.example.optiwatt_ai.RingChartView
                 android:id="@+id/ringChart"
-                android:layout_width="260dp"
+                android:layout_width="245dp"
                 android:layout_height="225dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textHome" />
+                app:layout_constraintTop_toBottomOf="@+id/textHome" />
 
             <View
-                android:id="@+id/view"
-                android:layout_width="371dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="92dp"
+                android:id="@+id/IconSopra"
+                android:layout_width="348dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/stilecircolare"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ringChart" />
+                app:layout_constraintTop_toBottomOf="@+id/ringChart" />
+
+            <View
+                android:id="@+id/IconSotto"
+                android:layout_width="348dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/stilecircolare"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/IconSopra" />
 
             <ImageView
                 android:id="@+id/UploadButton"
@@ -79,13 +92,135 @@
                 app:srcCompat="@drawable/uploadbutton" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textConsumption"
+                style="@style/NunitoBoldText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total consumption"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="22dp"
-                tools:layout_editor_absoluteY="436dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="130dp"
+                android:text="@string/total_consumption"
+                app:layout_constraintBottom_toBottomOf="@+id/IconSopra"
+                app:layout_constraintStart_toStartOf="@+id/IconSopra"
+                app:layout_constraintTop_toTopOf="@+id/IconSopra" />
+
+            <TextView
+                android:id="@+id/textCost"
+                style="@style/NunitoBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="80dp"
+                android:text="@string/cost_per_kwh"
+                app:layout_constraintBottom_toBottomOf="@+id/IconSopra"
+                app:layout_constraintStart_toStartOf="@+id/IconSopra"
+                app:layout_constraintTop_toTopOf="@+id/IconSopra" />
+
+            <TextView
+                android:id="@+id/textCO2"
+                style="@style/NunitoBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="130dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/co2_emissions"
+                app:layout_constraintBottom_toBottomOf="@+id/IconSopra"
+                app:layout_constraintStart_toStartOf="@+id/IconSopra"
+                app:layout_constraintTop_toTopOf="@+id/IconSopra" />
+
+            <TextView
+                android:id="@+id/textConsumptionR"
+                style="@style/NunitoBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="130dp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/IconSopra"
+                app:layout_constraintEnd_toEndOf="@+id/IconSopra"
+                app:layout_constraintTop_toTopOf="@+id/IconSopra" />
+
+            <TextView
+                android:id="@+id/textCostR"
+                style="@style/NunitoBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="80dp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/IconSopra"
+                app:layout_constraintEnd_toEndOf="@+id/IconSopra"
+                app:layout_constraintTop_toTopOf="@+id/IconSopra" />
+
+            <TextView
+                android:id="@+id/textCO2R"
+                style="@style/NunitoBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="40dp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/IconSopra"
+                app:layout_constraintEnd_toEndOf="@+id/IconSopra"
+                app:layout_constraintTop_toTopOf="@+id/IconSopra" />
+
+            <TextView
+                android:id="@+id/textInChartLeft"
+                style="@style/NunitoBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginEnd="8dp"
+                android:text="0"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ringChart"
+                app:layout_constraintEnd_toStartOf="@+id/textInChartRight"
+                app:layout_constraintStart_toStartOf="@+id/ringChart"
+                app:layout_constraintTop_toTopOf="@+id/ringChart" />
+
+            <TextView
+                android:id="@+id/textInChartRight"
+                style="@style/NunitoBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"
+                android:text="@string/unit_kwh"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ringChart"
+                app:layout_constraintEnd_toEndOf="@+id/ringChart"
+                app:layout_constraintStart_toEndOf="@+id/textInChartLeft"
+                app:layout_constraintTop_toTopOf="@+id/ringChart" />
+
+            <TextView
+                android:id="@+id/textUpChart"
+                style="@style/NunitoBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:text="@string/energy"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toEndOf="@+id/ringChart"
+                app:layout_constraintStart_toStartOf="@+id/ringChart"
+                app:layout_constraintTop_toTopOf="@+id/ringChart" />
+
+            <TextView
+                android:id="@+id/textDownChart"
+                style="@style/NunitoBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="70dp"
+                android:text="@string/average_months"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ringChart"
+                app:layout_constraintEnd_toEndOf="@+id/ringChart"
+                app:layout_constraintStart_toStartOf="@+id/ringChart" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
@@ -95,7 +230,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="0dp" />
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow"

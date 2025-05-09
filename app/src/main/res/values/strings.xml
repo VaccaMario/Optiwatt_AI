@@ -1,7 +1,14 @@
 <resources>
-    <string name="app_name">Optiwatt AI</string>
-    <string name="home_title">Home</string>
-    <string name="menu_button_desc">Menu</string>
-    <string name="upload_button_desc">Upload image</string>
+        <string name="app_name">Optiwatt AI</string>
+        <string name="home_title">Home</string>
+        <string name="menu_button_desc">Menu</string>
+        <string name="upload_button_desc">Upload image</string>
+        <string name="total_consumption">Total consumption</string>
+        <string name="cost_per_kwh">Cost per kWh</string>
+        <string name="co2_emissions">CO2 Emissions</string>
+        <string name="unit_kwh">KWh</string>
+        <string name="energy">Energy</string>
+        <string name="average_months">Average months</string>
+
 </resources>
 
