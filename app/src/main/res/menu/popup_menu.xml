@@ -3,4 +3,6 @@
         android:title="Provider Page"/>
     <item android:id="@+id/go_to_home"
         android:title="Home Page"/>
+    <item android:id="@+id/go_to_tips"
+        android:title="Tips Page"/>
 </menu>

@@ -2,37 +2,23 @@ package com.example.optiwatt_ai
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.PopupMenu
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.view.LayoutInflater
-import androidx.appcompat.app.AlertDialog
 
-class HomeActivity : AppCompatActivity() {
+class TipsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_home)
-
+        setContentView(R.layout.activity_tips)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val ringChart = findViewById<RingChartView>(R.id.ringChart)
-        ringChart.percent = 0.75f
-        ringChart.invalidate()
-
-        val uploadbutton = findViewById<ImageView>(R.id.UploadButton)
-        uploadbutton.setOnClickListener{
-            val intent = Intent(this, INPUT_img::class.java)
-            startActivity(intent)        }
-
         val menuButton = findViewById<ImageView>(R.id.menuButton)
 
         menuButton.setOnClickListener {

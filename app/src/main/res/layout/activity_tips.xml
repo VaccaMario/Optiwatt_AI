@@ -52,11 +52,11 @@
             <View
                 android:id="@+id/view1"
                 android:layout_width="0dp"
-                android:layout_height="160dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/rounded_box"
+                android:background="@drawable/stilecircolare"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textHome" />
@@ -65,11 +65,11 @@
             <View
                 android:id="@+id/view2"
                 android:layout_width="0dp"
-                android:layout_height="160dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/rounded_box"
+                android:background="@drawable/stilecircolare"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view1" />
@@ -78,12 +78,12 @@
             <View
                 android:id="@+id/view3"
                 android:layout_width="0dp"
-                android:layout_height="160dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="24dp"
-                android:background="@drawable/rounded_box"
+                android:background="@drawable/stilecircolare"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view2" />
