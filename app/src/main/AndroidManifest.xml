@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.optiwatt_ai">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-
 
     <application
         android:name=".OptiwattApp"
@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Optiwatt_AI"
         tools:targetApi="31">
+        <activity
+            android:name=".Tips"
+            android:exported="false" />
         <activity
             android:name=".INPUT_img"
             android:exported="false" />
